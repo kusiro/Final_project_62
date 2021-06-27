@@ -26,12 +26,14 @@ void menu_destroy(){
 void game_scene_init(){
   character_init();
   background_init();
+  cone_init();
   // background = al_load_bitmap("./image/stage.jpg");
 }
 void game_scene_draw(){
   // al_draw_bitmap(background, 0, 0, 0);
   background_draw();
   character_draw();
+  cone_draw();
 }
 void game_scene_destroy(){
   background_destroy();

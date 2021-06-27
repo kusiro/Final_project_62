@@ -113,3 +113,6 @@ void character_destory(){
     al_destroy_bitmap(cat.img_move[1]);
     al_destroy_sample_instance(cat.jump_Sound);
 }
+int get_character_position() {
+  return cat.y;
+}

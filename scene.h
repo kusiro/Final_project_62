@@ -1,5 +1,6 @@
 #include "global.h"
 #include "background.h"
+#include "object.h"
 #include "charater.h"
 
 void menu_init();

@@ -104,14 +104,21 @@ int process_event(){
   }else if( window == 2 ){
     background_process(event);
     charater_process(event);
+    cone_process(event);
   }
-
+  int cat_position = get_character_position();
+  int cone_x = get_cone_x();
+  int cone_y = get_cone_y();
+  if(cone_x < 200 && cone_x + 128 > 50 && cone_y < cat_position + 151 && cone_y + 128 > cat_position) {
+    return GAME_TERMINATE;
+  }
   // Shutdown our program
   if(event.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
     return GAME_TERMINATE;
   else if(event.type == ALLEGRO_EVENT_TIMER)
     if(event.timer.source == fps)
       draw = true;
+
   game_update();
   return 0;
 }

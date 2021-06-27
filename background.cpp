@@ -1,11 +1,11 @@
 #include "background.h"
 
 typedef struct bgd {
-  int x, y; // the position of image
-  int width, height; // the width and height of image
+  int x, y;
+  int width, height;
   ALLEGRO_BITMAP *bg_move[2];
-  int background; // counting the time of background
-  int background_time; // indicate how long the background
+  int background;
+  int background_time;
 
 } Background;
 
