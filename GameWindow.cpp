@@ -102,6 +102,7 @@ int process_event(){
   if( window == 1 ){
     menu_process(event);
   }else if( window == 2 ){
+    background_process(event);
     charater_process(event);
   }
 
@@ -137,8 +138,8 @@ int game_run() {
 }
 
 void game_destroy() {
-    // Make sure you destroy all things
-    al_destroy_event_queue(event_queue);
-    al_destroy_display(display);
-    game_scene_destroy();
+  // Make sure you destroy all things
+  al_destroy_event_queue(event_queue);
+  al_destroy_display(display);
+  game_scene_destroy();
 }

@@ -1,5 +1,6 @@
 #include "global.h"
 #include "charater.h"
+#include "background.h"
 #include "scene.h"
 
 int Game_establish();

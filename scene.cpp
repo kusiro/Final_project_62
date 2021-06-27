@@ -25,13 +25,15 @@ void menu_destroy(){
 // function of game_scene
 void game_scene_init(){
   character_init();
-  background = al_load_bitmap("./image/stage.jpg");
+  background_init();
+  // background = al_load_bitmap("./image/stage.jpg");
 }
 void game_scene_draw(){
-  al_draw_bitmap(background, 0, 0, 0);
+  // al_draw_bitmap(background, 0, 0, 0);
+  background_draw();
   character_draw();
 }
 void game_scene_destroy(){
-  al_destroy_bitmap(background);
+  background_destroy();
   character_destory();
 }

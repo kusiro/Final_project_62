@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1624807075 source:e:\class\final_project_62\charater.cpp
+1624809495 source:e:\class\final_project_62\charater.cpp
 	"charater.h"
 
 1624805294 e:\class\final_project_62\charater.h
@@ -316,24 +316,32 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1624808234 source:e:\class\final_project_62\gamewindow.cpp
+1624810711 source:e:\class\final_project_62\gamewindow.cpp
 	"GameWindow.h"
 
-1624805294 e:\class\final_project_62\gamewindow.h
+1624809438 e:\class\final_project_62\gamewindow.h
 	"global.h"
 	"charater.h"
+	"background.h"
 	"scene.h"
 
-1624805294 e:\class\final_project_62\scene.h
+1624809755 e:\class\final_project_62\scene.h
 	"global.h"
+	"background.h"
 	"charater.h"
 
-1624808703 source:e:\class\final_project_62\global.cpp
+1624808997 source:e:\class\final_project_62\global.cpp
 	"global.h"
 
 1624805294 source:e:\class\final_project_62\main.cpp
 	"GameWindow.h"
 
-1624808788 source:e:\class\final_project_62\scene.cpp
+1624809732 source:e:\class\final_project_62\scene.cpp
 	"scene.h"
+
+1624812814 source:e:\class\final_project_62\background.cpp
+	"background.h"
+
+1624784177 e:\class\final_project_62\background.h
+	"global.h"
 
