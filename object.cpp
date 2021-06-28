@@ -12,6 +12,7 @@ typedef struct object
 
 Object cone;
 
+// use speed, when cont > 3, speed++
 int newPos = 1;
 int cone_speed = 7;
 int cone_count = 0;
@@ -42,7 +43,7 @@ void cone_process(ALLEGRO_EVENT event){
   }
 }
 
-//待完成: Cone move的細節
+// cone 跑道最左邊後產生 newPos, 隨機下一個 cone 的 y
 void cone_draw(){
   if(cone.cnt < cone.cnt_time + 100) {
     al_draw_bitmap(cone.img, 800 - cone.cnt, HEIGHT / 3 * newPos, 0);

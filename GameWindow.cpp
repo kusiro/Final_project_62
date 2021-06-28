@@ -61,7 +61,7 @@ void game_init() {
   fps  = al_create_timer( 1.0 / FPS );
   al_register_event_source(event_queue, al_get_timer_event_source( fps )) ;
 
-  // initialize the icon on the display
+  // 換成貓貓 icon
   ALLEGRO_BITMAP *icon = al_load_bitmap("./image/icon.png");
   score_font = al_load_ttf_font("./font/Comfortaa-Bold.ttf", 40, 0);
   al_set_display_icon(display, icon);
@@ -101,8 +101,10 @@ void game_update(){
 int process_event(){
   ALLEGRO_EVENT event;
 
+  // 計算 score
   score++;
   sprintf(scoreText, "%lld", score);
+
   al_wait_for_event(event_queue, &event);
 
   if( window == 1 ){
@@ -113,7 +115,7 @@ int process_event(){
     cone_process(event);
   }
 
-  // touch the cone
+  // 偵測有沒有撞到路障
   int cat_position = get_character_position();
   int cone_x = get_cone_x();
   int cone_y = get_cone_y();
@@ -137,6 +139,8 @@ void game_draw() {
     menu_draw();
   }else if( window == 2 ){
     game_scene_draw();
+
+    // 分數
     al_draw_text(score_font, al_map_rgb(255, 255, 255), WIDTH / 2, 35, ALLEGRO_ALIGN_CENTRE, scoreText);
   }
   al_flip_display();

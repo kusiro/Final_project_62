@@ -78,6 +78,7 @@ void charater_update(){
         }
     }else if( key_state[ALLEGRO_KEY_SPACE] ){
         cat.state = JUMP;
+      // cat is always runing, so turn STOP to MOVE
     }else if( cat.anime == cat.anime_time-1 ){
         cat.anime = 0;
         cat.state = MOVE;

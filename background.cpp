@@ -9,6 +9,7 @@ typedef struct bgd {
 
 } Background;
 
+// add speed and count, when count > 3, speed++
 Background bg;
 int speed = 7;
 int count = 0;
@@ -35,6 +36,7 @@ void background_init(){
 void background_process(ALLEGRO_EVENT event){
   if (event.type == ALLEGRO_EVENT_TIMER) {
     if (event.timer.source == fps) {
+      // use speed
       bg.background += speed;
       bg.background %= bg.background_time;
       if(bg.background >= bg.background_time - 6) {
@@ -49,6 +51,7 @@ void background_process(ALLEGRO_EVENT event){
 }
 
 void background_draw(){
+  // loop the background
   if (bg.background < bg.background_time){
     al_draw_bitmap(bg.bg_move[0], 0 - bg.background, 0, 0);
     al_draw_bitmap(bg.bg_move[0], 800 - bg.background, 0, 0);
