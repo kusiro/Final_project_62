@@ -13,6 +13,8 @@ typedef struct object
 Object cone;
 
 int newPos = 1;
+int cone_speed = 7;
+int cone_count = 0;
 
 void cone_init(){
   // load cone images
@@ -27,8 +29,15 @@ void cone_init(){
 void cone_process(ALLEGRO_EVENT event){
   if( event.type == ALLEGRO_EVENT_TIMER ){
     if( event.timer.source == fps ){
-      cone.cnt += 7;
+      cone.cnt += cone_speed;
       cone.cnt %= cone.cnt_time + 130;
+      if(cone.cnt >= cone.cnt_time + 120) {
+        cone_count++;
+      }
+      if(cone_count > 3) {
+        cone_count = 0;
+        cone_speed++;
+      }
     }
   }
 }

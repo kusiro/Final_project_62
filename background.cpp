@@ -10,6 +10,8 @@ typedef struct bgd {
 } Background;
 
 Background bg;
+int speed = 7;
+int count = 0;
 
 
 void background_init(){
@@ -33,8 +35,15 @@ void background_init(){
 void background_process(ALLEGRO_EVENT event){
   if (event.type == ALLEGRO_EVENT_TIMER) {
     if (event.timer.source == fps) {
-      bg.background += 7;
+      bg.background += speed;
       bg.background %= bg.background_time;
+      if(bg.background >= bg.background_time - 6) {
+        count++;
+      }
+      if(count > 3) {
+        count = 0;
+        speed++;
+      }
     }
   }
 }

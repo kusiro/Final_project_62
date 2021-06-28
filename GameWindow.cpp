@@ -2,6 +2,8 @@
 
 bool draw = false;
 int window = 1;
+long long int score = 0;
+char scoreText[1000005];
 
 const char *title = "Final Project Team 62";
 
@@ -9,6 +11,7 @@ const char *title = "Final Project Team 62";
 ALLEGRO_DISPLAY* display = NULL;
 ALLEGRO_SAMPLE *song=NULL;
 ALLEGRO_SAMPLE_INSTANCE *sample_instance;
+ALLEGRO_FONT *score_font = NULL;
 
 int Game_establish() {
   int msg = 0;
@@ -60,6 +63,7 @@ void game_init() {
 
   // initialize the icon on the display
   ALLEGRO_BITMAP *icon = al_load_bitmap("./image/icon.png");
+  score_font = al_load_ttf_font("./font/Comfortaa-Bold.ttf", 40, 0);
   al_set_display_icon(display, icon);
 }
 
@@ -95,10 +99,12 @@ void game_update(){
   }
 }
 int process_event(){
-  // Request the event
   ALLEGRO_EVENT event;
+
+  score++;
+  sprintf(scoreText, "%lld", score);
   al_wait_for_event(event_queue, &event);
-  // process the event of other component
+
   if( window == 1 ){
     menu_process(event);
   }else if( window == 2 ){
@@ -106,12 +112,15 @@ int process_event(){
     charater_process(event);
     cone_process(event);
   }
+
+  // touch the cone
   int cat_position = get_character_position();
   int cone_x = get_cone_x();
   int cone_y = get_cone_y();
   if(cone_x < 200 && cone_x + 128 > 50 && cone_y < cat_position + 151 && cone_y + 128 > cat_position) {
     return GAME_TERMINATE;
   }
+
   // Shutdown our program
   if(event.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
     return GAME_TERMINATE;
@@ -123,11 +132,12 @@ int process_event(){
   return 0;
 }
 
-void game_draw(){
+void game_draw() {
   if( window == 1 ){
     menu_draw();
   }else if( window == 2 ){
     game_scene_draw();
+    al_draw_text(score_font, al_map_rgb(255, 255, 255), WIDTH / 2, 35, ALLEGRO_ALIGN_CENTRE, scoreText);
   }
   al_flip_display();
 }

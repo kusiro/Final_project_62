@@ -316,7 +316,7 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1624834449 source:e:\class\final_project_62\gamewindow.cpp
+1624837006 source:e:\class\final_project_62\gamewindow.cpp
 	"GameWindow.h"
 
 1624813406 e:\class\final_project_62\gamewindow.h
@@ -341,7 +341,7 @@
 1624832209 source:e:\class\final_project_62\scene.cpp
 	"scene.h"
 
-1624830774 source:e:\class\final_project_62\background.cpp
+1624838557 source:e:\class\final_project_62\background.cpp
 	"background.h"
 
 1624784177 e:\class\final_project_62\background.h
@@ -350,6 +350,6 @@
 1624833953 e:\class\final_project_62\object.h
 	"global.h"
 
-1624833956 source:e:\class\final_project_62\object.cpp
+1624838547 source:e:\class\final_project_62\object.cpp
 	"object.h"
 
