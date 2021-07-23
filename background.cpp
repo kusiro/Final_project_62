@@ -14,8 +14,9 @@ Background bg;
 int speed = 7;
 int count = 0;
 
-
 void background_init(){
+  speed = 7;
+  count = 0;
   // load road images
   for(int i = 1 ; i <= 2 ; i++){
     char temp[50];
@@ -30,6 +31,7 @@ void background_init(){
   // initial the BG component
   bg.background = 0;
   bg.background_time = 800;
+
 }
 
 //移動的背景
@@ -42,7 +44,7 @@ void background_process(ALLEGRO_EVENT event){
       if(bg.background >= bg.background_time - 6) {
         count++;
       }
-      if(count > 3) {
+      if(count > 1) {
         count = 0;
         speed++;
       }

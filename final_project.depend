@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1624833259 source:e:\class\final_project_62\charater.cpp
+1627052964 source:e:\class\final_project_62\charater.cpp
 	"charater.h"
 
 1624833257 e:\class\final_project_62\charater.h
 	"global.h"
 
-1624805294 e:\class\final_project_62\global.h
+1627052140 e:\class\final_project_62\global.h
 	<stdio.h>
+	<stdlib.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_image.h>
@@ -316,32 +317,35 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1624837006 source:e:\class\final_project_62\gamewindow.cpp
+1627052652 source:e:\class\final_project_62\gamewindow.cpp
 	"GameWindow.h"
 
-1624813406 e:\class\final_project_62\gamewindow.h
+1627052063 e:\class\final_project_62\gamewindow.h
 	"global.h"
 	"charater.h"
 	"object.h"
 	"background.h"
 	"scene.h"
+	"about.h"
+	"gameover.h"
 
-1624813383 e:\class\final_project_62\scene.h
+1627047163 e:\class\final_project_62\scene.h
 	"global.h"
 	"background.h"
 	"object.h"
 	"charater.h"
+	"gameover.h"
 
-1624808997 source:e:\class\final_project_62\global.cpp
+1627051211 source:e:\class\final_project_62\global.cpp
 	"global.h"
 
 1624805294 source:e:\class\final_project_62\main.cpp
 	"GameWindow.h"
 
-1624832209 source:e:\class\final_project_62\scene.cpp
+1627053101 source:e:\class\final_project_62\scene.cpp
 	"scene.h"
 
-1624838626 source:e:\class\final_project_62\background.cpp
+1627052915 source:e:\class\final_project_62\background.cpp
 	"background.h"
 
 1624784177 e:\class\final_project_62\background.h
@@ -350,6 +354,27 @@
 1624833953 e:\class\final_project_62\object.h
 	"global.h"
 
-1624838547 source:e:\class\final_project_62\object.cpp
+1627052957 source:e:\class\final_project_62\object.cpp
 	"object.h"
+
+1627011248 e:\class\final_project_62\game_over.h
+	"global.h"
+	"background.h"
+	"object.h"
+	"charater.h"
+
+1627011263 source:e:\class\final_project_62\game_over.cpp
+	"game_over.h"
+
+1627053424 source:e:\class\final_project_62\gameover.cpp
+	"gameover.h"
+
+1627048990 e:\class\final_project_62\gameover.h
+	"global.h"
+
+1627048700 source:e:\class\final_project_62\about.cpp
+	"about.h"
+
+1627047749 e:\class\final_project_62\about.h
+	"global.h"
 

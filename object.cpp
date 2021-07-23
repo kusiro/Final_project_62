@@ -25,6 +25,10 @@ void cone_init(){
 
   cone.cnt = 0;
   cone.cnt_time = 800;
+
+  newPos = 1;
+  cone_speed = 7;
+  cone_count = 0;
 }
 
 void cone_process(ALLEGRO_EVENT event){
@@ -35,7 +39,7 @@ void cone_process(ALLEGRO_EVENT event){
       if(cone.cnt >= cone.cnt_time + 120) {
         cone_count++;
       }
-      if(cone_count > 3) {
+      if(cone_count > 1) {
         cone_count = 0;
         cone_speed++;
       }

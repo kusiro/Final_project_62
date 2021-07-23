@@ -1,7 +1,9 @@
 #ifndef GLOBAL_H_INCLUDED
 #define GLOBAL_H_INCLUDED
 #define GAME_TERMINATE -1
+
 #include <stdio.h>
+#include <stdlib.h>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_image.h>
@@ -16,6 +18,10 @@ extern const int WIDTH;
 extern const int HEIGHT;
 extern bool key_state[ALLEGRO_KEY_MAX];
 extern bool judge_next_window;
+extern int window;
+extern int msg;
+extern long long int score;
+extern long long int scoreList[20];
 extern ALLEGRO_EVENT_QUEUE *event_queue;
 extern ALLEGRO_TIMER *fps;
 #endif

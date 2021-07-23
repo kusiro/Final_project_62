@@ -3,6 +3,8 @@
 #include "object.h"
 #include "background.h"
 #include "scene.h"
+#include "about.h"
+#include "gameover.h"
 
 int Game_establish();
 void game_init();

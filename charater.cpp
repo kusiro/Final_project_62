@@ -100,10 +100,12 @@ void character_draw(){
     } else if ( cat.state == JUMP ){
         if (cat.anime < cat.anime_time / 2) {
             al_draw_bitmap(cat.img_jump[0], cat.x, cat.y, 0);
+            cat.y -= 15;
         }
         else {
             al_draw_bitmap(cat.img_jump[1], cat.x, cat.y, 0);
             al_play_sample_instance(cat.jump_Sound);
+            cat.y += 15;
         }
     }
 }
