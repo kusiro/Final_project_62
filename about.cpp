@@ -7,7 +7,7 @@ ALLEGRO_BITMAP *about_background = NULL;
 void about_init()
 {
   about_font = al_load_ttf_font("./font/Comfortaa-Bold.ttf", 24, 0);
-  about_background = al_load_bitmap("./image/cat_menu.jpg");
+  about_background = al_load_bitmap("./image/about_menu.jpg");
 }
 
 void about_process(ALLEGRO_EVENT event)
@@ -24,6 +24,7 @@ void about_process(ALLEGRO_EVENT event)
 void about_draw()
 {
   al_draw_bitmap(about_background, 0, 0, 0);
+  al_draw_filled_rectangle(WIDTH / 2 - 400, HEIGHT / 2 - 200, WIDTH / 2 + 400, HEIGHT / 2 + 200, al_map_rgba(255, 255, 255, 0.3));
   al_draw_text(about_font, al_map_rgb(0, 0, 0), 200, 350, ALLEGRO_ALIGN_CENTRE, "Press ESC to go back");
   al_draw_text(about_font, al_map_rgb(0, 0, 0), 200, 100, ALLEGRO_ALIGN_CENTRE, "Members");
   al_draw_text(about_font, al_map_rgb(0, 0, 0), WIDTH / 2, HEIGHT / 2 - 100, ALLEGRO_ALIGN_CENTRE, "106034001 SOON, CHUN");

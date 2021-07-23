@@ -40,6 +40,8 @@
 		</Compiler>
 		<Unit filename="GameWindow.cpp" />
 		<Unit filename="GameWindow.h" />
+		<Unit filename="about.cpp" />
+		<Unit filename="about.h" />
 		<Unit filename="background.cpp" />
 		<Unit filename="background.h" />
 		<Unit filename="charater.cpp" />
